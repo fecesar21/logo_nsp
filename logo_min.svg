@@ -1,0 +1,25 @@
+<svg width="200" height="60" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+    <!-- Versão Resumida para Sistemas (GLPI) -->
+    <g transform="translate(10, 5)">
+        <!-- ÍCONE (Apenas em Branco) -->
+        <g transform="scale(0.6)">
+            <path d="M 80 20 A 45 45 0 1 0 20 80" stroke="#FFFFFF" stroke-width="8" fill="none" stroke-linecap="round"/>
+            <g fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round">
+                <path d="M 30 75 Q 40 55 50 75" />
+                <path d="M 50 75 Q 60 55 70 75" />
+                <path d="M 70 75 Q 80 55 90 75" />
+            </g>
+            <circle cx="40" cy="50" r="5" fill="#FFFFFF" />
+            <circle cx="60" cy="50" r="5" fill="#FFFFFF" />
+            <circle cx="80" cy="50" r="5" fill="#FFFFFF" />
+            <path d="M 55 35 Q 65 25 75 35" stroke="#FFFFFF" stroke-width="4" fill="none" stroke-linecap="round" />
+        </g>
+
+        <!-- TEXTO (Sigla NSP em destaque) -->
+        <g transform="translate(65, 32)">
+            <text x="0" y="5" font-family="sans-serif" font-weight="900" font-size="38" fill="#FFFFFF">
+                NSP
+            </text>
+        </g>
+    </g>
+</svg>
