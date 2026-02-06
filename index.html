@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NSP - Núcleo de Segurança do Paciente</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700&display=swap');
+        
+        body {
+            font-family: 'Public Sans', sans-serif;
+            background-color: #f8fafc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .canvas-container {
+            background-color: white;
+            padding: 3rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+        .logo-box {
+            padding: 2rem;
+            background-color: white;
+            display: inline-block;
+        }
+        .btn-download {
+            margin-top: 2rem;
+            background-color: #004a80;
+            color: white;
+            padding: 0.75rem 2rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: opacity 0.2s;
+            border: none;
+            width: 100%;
+        }
+        .btn-download:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+
+<div class="canvas-container">
+    <div id="logo-capture" class="logo-box">
+        <svg width="450" height="150" viewBox="0 0 450 150" xmlns="http://www.w3.org/2000/svg">
+            <!-- ÍCONE À ESQUERDA -->
+            <g transform="translate(20, 25)">
+                <!-- Círculo incompleto azul -->
+                <path d="M 80 20 A 45 45 0 1 0 20 80" stroke="#004a80" stroke-width="6" fill="none" stroke-linecap="round"/>
+                
+                <!-- Figuras estilizadas (Pessoas) em Laranja -->
+                <g fill="none" stroke="#f29422" stroke-width="4" stroke-linecap="round">
+                    <path d="M 30 75 Q 40 55 50 75" />
+                    <path d="M 50 75 Q 60 55 70 75" />
+                    <path d="M 70 75 Q 80 55 90 75" />
+                </g>
+                
+                <!-- Cabeças/Pontos das figuras -->
+                <circle cx="40" cy="50" r="4" fill="#004a80" />
+                <circle cx="60" cy="50" r="4" fill="#004a80" />
+                <circle cx="80" cy="50" r="4" fill="#004a80" />
+                
+                <!-- Detalhe superior (Sinal/Ondas) -->
+                <path d="M 55 35 Q 65 25 75 35" stroke="#f29422" stroke-width="3" fill="none" stroke-linecap="round" />
+                <path d="M 60 25 Q 70 18 80 25" stroke="#f29422" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.7"/>
+            </g>
+
+            <!-- TEXTO À DIREITA -->
+            <g transform="translate(140, 70)">
+                <!-- Sigla em destaque -->
+                <text x="0" y="5" font-family="'Public Sans', sans-serif" font-weight="1100" font-size="46" fill="#004a80">
+                    NOTIFICAÇÃO
+                </text>
+                <!-- Nome completo embaixo em laranja e caixa alta -->
+                <text x="2" y="35" font-family="'Public Sans', sans-serif" font-weight="900" font-size="15" fill="#f29422" style="text-transform: uppercase; letter-spacing: 0.5px;">
+                    DE INCIDENTES E EVENTOS ADVERSOS
+                </text>
+            </g>
+        </svg>
+    </div>
+
+    <button onclick="downloadPNG()" class="btn-download">
+        Descarregar Logotipo (PNG)
+    </button>
+</div>
+
+<script>
+    function downloadPNG() {
+        const target = document.getElementById('logo-capture');
+        html2canvas(target, {
+            scale: 3,
+            backgroundColor: null
+        }).then(canvas => {
+            const link = document.createElement('a');
+            link.download = 'logo-nsp-estilo-institucional.png';
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        });
+    }
+</script>
+
+</body>
+</html>
