@@ -16,7 +16,7 @@
 
     <!-- TEXTO À DIREITA -->
     <g transform="translate(140, 70)">
-        <text x="0" y="5" font-family="sans-serif" font-weight="11    00" font-size="46" fill="#004a80">
+        <text x="0" y="5" font-family="sans-serif" font-weight="1300" font-size="46" fill="#004a80">
             NOTIFICAÇÃO
         </text>
         <text x="2" y="35" font-family="sans-serif" font-weight="700" font-size="15" fill="#f29422" style="text-transform: uppercase; letter-spacing: 0.5px;">
